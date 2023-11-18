@@ -18,9 +18,9 @@ import utility.ExtentReportManager;
 import utility.ReadData;
 
 public class TestBase 
-{
+{                   //extent reports contains two major classes 1.extentreport class   2.extents class
 	public ExtentReports report=ExtentReportManager.getReportInstance();
-	public ExtentTest logger;
+	public ExtentTest logger; //logs test steps into the previously generated html report
 	public static WebDriver driver; 
 	
 	public void initialization()throws Exception
