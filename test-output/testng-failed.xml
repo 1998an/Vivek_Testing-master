@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="MasterTest(failed)">
+  <test thread-count="5" name="GroupTest(failed)">
+    <groups>
+      <run>
+        <include name="sanity"/>
+        <exclude name="regression"/>
+      </run>
+    </groups>
     <classes>
-      <class name="testCases.verifyMultipleCredentialsTest">
+      <class name="testCases.CheckoutCompleteTest">
         <methods>
           <include name="closeBrowser"/>
+          <include name="verifybackHomeTest"/>
           <include name="setUp"/>
-          <include name="loginToApplicationWithMultipleDataTest" invocation-numbers="1"/>
         </methods>
-      </class> <!-- testCases.verifyMultipleCredentialsTest -->
+      </class> <!-- testCases.CheckoutCompleteTest -->
     </classes>
-  </test> <!-- MasterTest(failed) -->
+  </test> <!-- GroupTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
